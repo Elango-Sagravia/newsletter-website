@@ -18,7 +18,7 @@ export default function GridContainer({
           <Link
             href={`/archive/${item.slug}`}
             key={i}
-            className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] md:max-w-[300px] relative min-h-[300px]"
+            className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] relative min-h-[300px]"
           >
             <div className="relative min-h-[200px]">
               <Image
