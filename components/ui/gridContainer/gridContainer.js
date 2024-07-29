@@ -1,30 +1,3 @@
-export const data = [
-  {
-    title: "Subscriber",
-    value: 14.0,
-  },
-  {
-    title: "Revenue",
-    value: 120000.5,
-  },
-  {
-    title: "User Count",
-    value: 5000,
-  },
-  {
-    title: "Product Sales",
-    value: 75000,
-  },
-  {
-    title: "something ",
-    value: 1000000,
-  },
-  {
-    title: "Customer Satisfaction",
-    value: 0.95,
-  },
-];
-
 import Image from "next/image";
 import { BookOpen } from "lucide-react";
 import Link from "next/link";
@@ -38,7 +11,7 @@ export default function GridContainer({
   return (
     <>
       <div
-        className={`grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-${md_col} lg:grid-cols-${lg_col} mt-8`}
+        className={`grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-cols-${md_col} lg:grid-cols-${lg_col} mt-8`}
       >
         {/* Component rendering */}
         {articles.map((item, i) => (
