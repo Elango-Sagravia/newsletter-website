@@ -54,6 +54,7 @@ module.exports = {
         nl_background: "hsl(var(--nl-primary))",
         nl_sec_background: "hsl(var(--nl-seconday))",
         nl_button_border: "hsl(var(--nl-button-border))",
+        nl_blog_para: "hsl(var(--nl-blog-para))",
         nl_separator_border: "hsl(var(--nl-separator-border))",
       },
       borderRadius: {

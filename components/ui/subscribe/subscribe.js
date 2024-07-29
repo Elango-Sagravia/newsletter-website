@@ -20,7 +20,7 @@ export default function Subscribe() {
           <button
             style={{
               padding: ".5rem 1rem",
-              border: "1px solid #000000",
+              // border: "1px solid #000000",
               backgroundColor: "rgba(0,0,0)",
               color: "white",
               marginLeft: "5px",

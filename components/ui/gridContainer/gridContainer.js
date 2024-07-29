@@ -26,42 +26,53 @@ export const data = [
 ];
 
 import Image from "next/image";
+import { BookOpen } from "lucide-react";
+import Link from "next/link";
 
-export default function GridContainer({ hideButton }) {
+export default function GridContainer({
+  hideButton,
+  md_col = 2,
+  lg_col = 3,
+  articles,
+}) {
   return (
     <>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8">
+      <div
+        className={`grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-${md_col} lg:grid-cols-${lg_col} mt-8`}
+      >
         {/* Component rendering */}
-        {data.map((item, i) => (
-          <a
-            href="#"
+        {articles.map((item, i) => (
+          <Link
+            href={`/archive/${item.slug}`}
             key={i}
-            className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] relative min-h-[300px]"
+            className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] md:max-w-[300px] relative min-h-[300px]"
           >
             <div className="relative min-h-[200px]">
               <Image
-                src="https://hedonova.b-cdn.net/Hedonova%20images/%20All%20Hedonova%20blogs/How%20to%20calculate%20your%20retirement%20needs/How%20to%20calculate%20your%20retirement%20needs.webp"
+                src={item.banner_image}
                 alt="Example"
                 layout="fill"
                 objectFit="cover"
                 className="block"
               />
             </div>
-            <span className="text-[10px] text-nl_background my-2 block font-bold">
-              4 JUL 2024 <span>.</span> 9 MIN READ
+            <span className="text-[10px] text-nl_background my-2 block font-bold uppercase">
+              {item.published_at} <span>.</span> {item.read_time} READ
             </span>
-            <p className="">
-              Preferred equity real estate investing - How to guide
-            </p>
-          </a>
+            <p className="">{item.title}</p>
+          </Link>
         ))}
       </div>
 
       {!hideButton && (
-        <div className="flex justify-center mt-16">
-          <a className="px-8 py-2 border" href="">
+        <div className="flex justify-center mt-16 ">
+          <Link
+            className="flex px-4 py-2 border items-center gap-2"
+            href="/archive"
+          >
+            <BookOpen size={18} color="hsl(2.69 73.58% 41.57%)" />
             See archives
-          </a>
+          </Link>
         </div>
       )}
     </>
