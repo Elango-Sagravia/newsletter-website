@@ -13,13 +13,13 @@ export default function Footer() {
         <div>
           <ul>
             <li className="px-8 py-2">
-              <Link href="#">Advertise</Link>
+              <Link href="/advertise">Advertise</Link>
             </li>
             <li className="px-8 py-2">
-              <Link href="#">Archive</Link>
+              <Link href="/archives">Archives</Link>
             </li>
             <li className="px-8 py-2">
-              <Link href="#">Contact us</Link>
+              <Link href="/contact">Contact us</Link>
             </li>
           </ul>
         </div>
