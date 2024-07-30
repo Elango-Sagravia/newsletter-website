@@ -63,7 +63,7 @@ export default function AdvertiseForm() {
 
   const { quarter, budget, firstname, email, job, company, message } = details;
   return (
-    <section className="px-0 lg:px-16 lg:py-16">
+    <section className="px-0 lg:px-16 lg:py-16" id="advertise-form">
       <div
         className={`px-4 md:px-16 py-16 bg-nl_sec_background flex flex-col sm:flex-row ${
           submitted && "min-h-96"
@@ -235,7 +235,11 @@ export default function AdvertiseForm() {
                 <div className="flex-1 flex justify-between items-center">
                   <p className="text-sm">
                     By submitting this form you agree to our{" "}
-                    <Link className="underline underline-offset-4" href="#">
+                    <Link
+                      className="underline underline-offset-4"
+                      href="/privacy-policy"
+                      target="_blank"
+                    >
                       Privacy Policy
                     </Link>
                   </p>

@@ -1,4 +1,4 @@
-import PrimaryButton from "../primaryButton/primaryButton";
+import PrimaryInterLinkButton from "../PrimaryInterLinkButton/PrimaryInterLinkButton";
 import { ArrowDown } from "lucide-react";
 
 export default function AdvertiseHero() {
@@ -11,10 +11,10 @@ export default function AdvertiseHero() {
         <p className="pt-4 pb-8">
           want to reach thousands of curious people around the world
         </p>
-        <PrimaryButton>
+        <PrimaryInterLinkButton>
           <ArrowDown size={18} color="hsl(2.69 73.58% 41.57%)" />
           <span className="px-2">Partner with Us</span>
-        </PrimaryButton>
+        </PrimaryInterLinkButton>
       </div>
       <div className="hidden flex-1 lg:block">Image</div>
     </div>

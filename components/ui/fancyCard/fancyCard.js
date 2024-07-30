@@ -13,17 +13,17 @@ export default function FancyCard({ article }) {
           objectFit="cover"
         />
       </div>
-      <div className="flex-1 bg-black text-white flex flex-col justify-center py-8 uppercase">
+      <Link
+        href={`archives/${article.slug}`}
+        className="flex-1 bg-black text-white flex flex-col justify-center py-8 uppercase"
+      >
         <span className="text-[12px] text-nl_background font-bold mb-2 block px-16">
           {article.published_at} <span className="text-4xl">.</span>{" "}
           {article.read_time}READ
         </span>
-        <Link
-          href={`archive/${article.slug}`}
-          className="text-3xl px-16 leading-10 hover:decoration-solid hover:underline"
-        >
+        <p className="text-3xl px-16 leading-10 hover:decoration-solid hover:underline">
           {article.title}
-        </Link>
+        </p>
         <div className="px-16 mt-4 flex items-center">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -31,7 +31,7 @@ export default function FancyCard({ article }) {
           </Avatar>
           <span className="ml-4 text-[12px]">By {article.author}</span>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

@@ -209,7 +209,11 @@ export default function ContactForm() {
                 <div className="flex-1 flex justify-between items-center">
                   <p className="text-sm">
                     By submitting this form you agree to our{" "}
-                    <Link className="underline underline-offset-4" href="#">
+                    <Link
+                      className="underline underline-offset-4"
+                      target="_blank"
+                      href="/privacy-policy"
+                    >
                       Privacy Policy
                     </Link>
                   </p>

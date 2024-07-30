@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 const routes = [
   { path: "/advertise", name: "Advertise" },
-  { path: "/archive", name: "Archive" },
+  { path: "/archives", name: "Archives" },
   { path: "/contact", name: "Contact us" },
 ];
 export default function Navbar() {

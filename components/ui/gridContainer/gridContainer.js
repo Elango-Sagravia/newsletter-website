@@ -16,7 +16,7 @@ export default function GridContainer({
         {/* Component rendering */}
         {articles.map((item, i) => (
           <Link
-            href={`/archive/${item.slug}`}
+            href={`/archives/${item.slug}`}
             key={i}
             className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] relative min-h-[300px]"
           >
@@ -41,7 +41,7 @@ export default function GridContainer({
         <div className="flex justify-center mt-16 ">
           <Link
             className="flex px-4 py-2 border items-center gap-2"
-            href="/archive"
+            href="/archives"
           >
             <BookOpen size={18} color="hsl(2.69 73.58% 41.57%)" />
             See archives
