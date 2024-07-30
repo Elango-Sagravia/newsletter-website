@@ -27,7 +27,9 @@ export default function Hero() {
           macroeconomic policies, Get the 5-minute newsletter
         </p>
         {isSubscribed ? (
-          <p>Thank you for joining our newsletter</p>
+          <p className="text-nl_background font-bold mt-10">
+            Thank you for joining our newsletter
+          </p>
         ) : (
           // <form
           //   className="mt-4 pb-2 flex w-3/4 md:w-2/3 flex-col gap-2"
