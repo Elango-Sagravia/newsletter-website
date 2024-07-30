@@ -10,8 +10,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import RelatedArticles from "@/components/ui/relatedArticles/relatedArticles";
 import Subscribe from "@/components/ui/subscribe/subscribe";
+import SubscriberForm from "@/components/ui/subscriberForm/subscriberForm";
+import { useAppContext } from "@/context/appContext";
 import { notFound } from "next/navigation";
-import { useState } from "react";
 
 // export async function generateStaticParams() {
 //   return blogs.map((post) => ({
@@ -20,7 +21,7 @@ import { useState } from "react";
 // }
 
 export default function Home({ params }) {
-  const [isSubscribed, setSubscribed] = useState(false);
+  const { isSubscribed } = useAppContext();
   const post = blogs.find((blog) => blog.slug === params.slug);
   const cut_off = isSubscribed ? post.data.length : post.cut_off;
 
@@ -74,7 +75,8 @@ export default function Home({ params }) {
             <p className="text-sm mt-4 md:text-center">
               Gain access to articles, news alerts, select newsletters
             </p>
-            <form className="w-5/6 md:w-3/4 lg:w-3/5 flex flex-col mt-8 md:mx-auto">
+            <SubscriberForm formClasses="w-5/6 md:w-3/4 lg:w-3/5 flex flex-col gap-2 mt-8 md:mx-auto" />
+            {/* <form className="w-5/6 md:w-3/4 lg:w-3/5 flex flex-col mt-8 md:mx-auto">
               <div className="flex gap-2 justify-center">
                 <Input
                   type="email"
@@ -88,7 +90,7 @@ export default function Home({ params }) {
               <span className="text-[12px] mt-4">
                 100% free. No spam. Unsubscribe anytime
               </span>
-            </form>
+            </form> */}
           </div>
         </section>
       )}

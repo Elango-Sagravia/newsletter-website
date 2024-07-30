@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AdvertiseQuestion() {
   return (
-    <section className="px-8 md:px-16 py-16">
+    <section className="px-4 md:px-16 py-16">
       <div className="flex flex-col items-center">
         <h5 className="text-nl_background text-5xl leading-[3rem] text-center">
           Still got questions?

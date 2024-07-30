@@ -7,7 +7,7 @@ import {
 
 export default function FaqAccordion() {
   return (
-    <Accordion type="multiple" collapsible>
+    <Accordion type="multiple" collapsible="true">
       <AccordionItem value="item-1" className="pt-0">
         <AccordionTrigger className="font-normal no-underline pt-0">
           How do I subscribe to the newsletter?

@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/ui/navbar/navbar";
 import Footer from "@/components/ui/footer/footer";
+import AppProvider from "@/context/appContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,13 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <AppProvider>
+            <Navbar />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+            <Footer />
+          </AppProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -3,13 +3,10 @@ import { ArrowDown } from "lucide-react";
 
 export default function AdvertiseHero() {
   return (
-    <div className="flex px-8 md:px-16 py-16">
+    <div className="flex px-4 md:px-16 py-16">
       <div className="flex-1">
-        <h1
-          className="text-nl_background text-5xl leading-10"
-          style={{ lineHeight: "3.5rem" }}
-        >
-          Our Goal: To share fresh geoppolitical and macroeconomic news.
+        <h1 className="text-nl_background text-4xl">
+          Our Goal: To share fresh geopolitical and macroeconomic news.
         </h1>
         <p className="pt-4 pb-8">
           want to reach thousands of curious people around the world

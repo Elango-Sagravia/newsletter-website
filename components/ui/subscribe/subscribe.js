@@ -1,11 +1,25 @@
+"use client";
+
+import SubscribeForm from "@/components/ui/subscriberForm/subscriberForm";
+import { useAppContext } from "@/context/appContext";
 export default function Subscribe() {
+  const { isSubscribed } = useAppContext();
   return (
-    <div className="min-h-96 bg-nl_sec_background px-8 md:px-16 py-16">
-      <div className="mx-auto w-full sm:w-[400px]">
-        <h5 className="text-nl_background text-5xl leading-[3rem] text-center">
-          Get Daily News in your inbox
+    <div
+      className={`bg-nl_sec_background px-4 md:px-16 ${
+        isSubscribed ? "py-32" : "py-16"
+      }`}
+    >
+      <div className="mx-auto w-full md:w-3/5 lg:w-2/5 flex flex-col  items-center">
+        <h5 className="text-nl_background text-4xl text-center">
+          {isSubscribed
+            ? "Thank you for joining our newsletter"
+            : "Get Daily News in your inbox"}{" "}
         </h5>
-        <form className="pt-4 pb-4 flex max-w-md mt-8 px-2">
+        {!isSubscribed && (
+          <SubscribeForm formClasses="mt-8 pb-2 flex w-4/5 flex-col gap-2" />
+        )}
+        {/* <form className="pt-4 pb-4 flex max-w-md mt-8 px-2">
           <input
             style={{
               border: "1px solid",
@@ -32,7 +46,7 @@ export default function Subscribe() {
         </form>
         <p className="text-sm self-start px-2">
           100% free. No spam. Unsubscribe anytime.
-        </p>
+        </p> */}
       </div>
     </div>
   );
