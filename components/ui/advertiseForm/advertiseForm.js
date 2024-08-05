@@ -65,7 +65,7 @@ export default function AdvertiseForm() {
   return (
     <section className="px-0 lg:px-16 lg:py-16" id="advertise-form">
       <div
-        className={`px-4 md:px-16 py-16 bg-nl_sec_background flex flex-col sm:flex-row ${
+        className={`px-4 md:px-16 py-32 bg-nl_sec_background flex flex-col sm:flex-row ${
           submitted && "min-h-96"
         }`}
       >
@@ -187,7 +187,7 @@ export default function AdvertiseForm() {
                     Overall goal of the partnership?
                   </Label>
                   <Textarea
-                    className="bg-nl_sec_background focus:outline-none focus-visible:ring-0 placeholder:text-gray-400 rounded-none"
+                    className="bg-nl_sec_background focus:outline-none focus-visible:ring-0 placeholder:text-gray-400 rounded-none h-40"
                     placeholder="Main goal of the partnership"
                     id="message"
                     value={message}

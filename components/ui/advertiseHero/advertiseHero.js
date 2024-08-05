@@ -3,9 +3,9 @@ import { ArrowDown } from "lucide-react";
 
 export default function AdvertiseHero() {
   return (
-    <div className="flex px-4 md:px-16 py-16">
+    <div className="flex px-4 md:px-16 py-28">
       <div className="flex-1">
-        <h1 className="text-nl_background text-4xl">
+        <h1 className="text-nl_background text-5xl">
           Our Goal: To share fresh geopolitical and macroeconomic news.
         </h1>
         <p className="pt-4 pb-8">

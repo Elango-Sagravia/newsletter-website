@@ -11,16 +11,16 @@ export default function GridContainer({
   return (
     <>
       <div
-        className={`grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-cols-${md_col} lg:grid-cols-${lg_col} mt-8`}
+        className={`grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-cols-${md_col} lg:grid-cols-${lg_col} mt-8`}
       >
         {/* Component rendering */}
         {articles.map((item, i) => (
           <Link
             href={`/archives/${item.slug}`}
             key={i}
-            className="flex flex-col min-w-[250px] sm:min-w-[260px] md:min-w-[300px] relative min-h-[300px]"
+            className="flex flex-col min-w-[250px] sm:min-w-[360px] md:min-w-[360px] relative min-h-[300px]"
           >
-            <div className="relative min-h-[200px]">
+            <div className="relative min-h-[250px]">
               <Image
                 src={item.banner_image}
                 alt="Example"
@@ -32,7 +32,7 @@ export default function GridContainer({
             <span className="text-[10px] text-nl_background my-2 block font-bold uppercase">
               {item.published_at} <span>.</span> {item.read_time} READ
             </span>
-            <p className="">{item.title}</p>
+            <p className="text-lg">{item.title}</p>
           </Link>
         ))}
       </div>

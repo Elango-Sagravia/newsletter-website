@@ -55,7 +55,7 @@ export default function ContactForm() {
   return (
     <section className={`px-0 lg:px-16`}>
       <div
-        className={`px-4 lg:px-16 py-16 bg-nl_sec_background flex flex-col sm:flex-row ${
+        className={`px-4 lg:px-16 py-28 bg-nl_sec_background flex flex-col sm:flex-row ${
           submitted && "min-h-96"
         }`}
       >
@@ -92,7 +92,7 @@ export default function ContactForm() {
         ) : (
           <div className="flex-1 mt-5 sm:mt-0">
             <div>
-              <h2 className="text-2xl text-nl_background py-4">Inquiry</h2>
+              <h2 className="text-2xl text-nl_background pb-4">Inquiry</h2>
               <p className="text-sm w-2/3 pb-8">
                 Leave us your details and a member of our team will get back to
                 you as soon as possible
@@ -196,7 +196,7 @@ export default function ContactForm() {
                     Message
                   </Label>
                   <Textarea
-                    className="bg-nl_sec_background focus:outline-none focus-visible:ring-0 placeholder:text-gray-400 rounded-none h-4/5"
+                    className="bg-nl_sec_background focus:outline-none focus-visible:ring-0 placeholder:text-gray-400 rounded-none h-32"
                     placeholder="Enter message text here"
                     id="message"
                     value={message}

@@ -7,11 +7,11 @@ export default function Subscribe() {
   return (
     <div
       className={`bg-nl_sec_background px-4 md:px-16 ${
-        isSubscribed ? "py-32" : "py-16"
+        isSubscribed ? "py-36" : "py-28"
       }`}
     >
       <div className="mx-auto w-full md:w-3/5 lg:w-2/5 flex flex-col  items-center">
-        <h5 className="text-nl_background text-4xl text-center">
+        <h5 className="text-nl_background text-5xl text-center">
           {isSubscribed
             ? "Thank you for joining our newsletter"
             : "Get Daily News in your inbox"}{" "}

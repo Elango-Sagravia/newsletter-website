@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FancyCard({ article }) {
   return (
-    <div className="flex mt-8 min-h-96">
+    <div className="flex mt-8 min-h-96 md:min-h-[410px]">
       <div className="hidden flex-1 sm:block relative">
         <Image
           src={article.banner_image}

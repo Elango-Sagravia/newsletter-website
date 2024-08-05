@@ -5,8 +5,8 @@ import Subscribe from "@/components/ui/subscribe/subscribe";
 export default function Contact() {
   return (
     <main>
-      <header className="px-4 md:px-16 py-16">
-        <h1 className="text-4xl text-nl_background">Contact us</h1>
+      <header className="px-4 md:px-16 py-20">
+        <h1 className="text-5xl text-nl_background">Contact us</h1>
       </header>
       <ContactForm />
       <Faq />

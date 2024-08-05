@@ -7,7 +7,7 @@ export default function archive() {
   return (
     <main>
       <ArchiveHeader />
-      <section className="px-8 md:px-16 py-16">
+      <section className="px-8 md:px-16 py-32">
         <GridContainer hideButton={true} articles={blogs} />
       </section>
       <Subscribe />
